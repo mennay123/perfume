@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,500;1,500&family=Roboto:wght@700&display=swap');
+:root{
+    --cyan-color:hsl(158, 36%, 37%);
+  --dark-cream: hsl(30, 38%, 92%);
+    --dark-blue:hsl(212, 21%, 14%);
+
+    --dark-gray:hsl(228, 12%, 48%);
+    
+}
+*{
+    /*علشان الصورة تكون نفس طول الكلام او العكس*/
+    padding:0 ;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    /* font-family: "Fraunces", serif;*/
+    background-color: var(--dark-cream);
+    min-height: 100vh;
+    display: grid;
+    place-content: center; }
+
+    #product{
+        display: grid;
+        grid-template-columns:repeat(2,1fr) ;
+        margin: 1rem;
+        max-width: 600px;
+
+    }
+
+img{
+    display: block;
+    max-width: 100%;
+}
+    #product img{
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+    }
+
+.product-content{
+    background-color: #fff;
+    padding: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.product-content .par{
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--dark-gray);
+}
+.product-content h1{
+    font-family: "Fraunces", serif;
+    font-size: 32px;
+    margin: 20px 0;
+    line-height: 1;
+color: var(--dark-blue);
+}
+.product-content p{
+    font-size:14px   ;
+    color: var(--dark-gray);
+    line-height: 1.6;
+
+}
+.product-content .price{
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+}
+.product-content .price .curr-price{
+
+font-size: 30px;
+color: var(--cyan-color);
+font-family: "Fraunces", serif;
+margin-right: 20px;
+
+}
+#product .product-content .cart{
+   
+   display: flex;
+   justify-content: center; 
+   text-align: center;
+   padding: 15px;
+   border: none;
+    background-color: var(--cyan-color);
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    border-radius: 8px;
+}
+#product .product-content .cart::before{
+
+    content: "";
+background: url("./icon-cart.svg");
+width: 15px;
+height: 16px;
+margin-right: 10px;
+
+}
+@media (max-width:700px){
+    #product{
+        grid-template-columns: 1fr;
+    }
+    #product img{
+       
+        border-bottom-left-radius: 0px; 
+        border-top-right-radius: 10px;
+    }
+    .product-content{
+    
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+    }
+}
+
